@@ -52,10 +52,13 @@
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.3.4, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.9.1, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="domain_name (v0.6.20240107, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="error_highlight (v0.6.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.12.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="http-accept (v1.7.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="http-cookie (v1.0.5, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.1, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-console (v0.7.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="irb (v1.11.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
@@ -64,6 +67,8 @@
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.8.1, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="marcel (v1.0.3, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.5.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2024.0206, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.5, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.22.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.7.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
@@ -73,6 +78,7 @@
     <orderEntry type="library" scope="PROVIDED" name="net-pop (v0.1.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-protocol (v0.2.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-smtp (v0.4.0.1, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="netrc (v0.11.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.7.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.16.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="psych (v5.1.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
@@ -91,6 +97,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v6.6.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.9.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.4.3, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v2.1.0, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.6, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.18.1, Remote-rbenv: ruby-3.1.2-p20) [gem]" level="application" />

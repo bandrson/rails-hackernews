@@ -1,3 +1,3 @@
 class Job < Item
-  belongs_to :item
+  belongs_to :url, optional: true
 end
