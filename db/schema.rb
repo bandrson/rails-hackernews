@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_29_195832) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_29_200554) do
   create_table "items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "parent_item_id"
@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_195832) do
   create_table "votes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
-    t.boolean "vote", null: false
+    t.integer "vote", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_votes_on_item_id"
