@@ -84,4 +84,31 @@ def add_comment(item, author)
   c
 end
 
+def generate_votes
+  User.all.each do |u|
+    Item.all.each do |i|
+      odds = 1
+      if i.voters.count >= 1
+        odds = 2
+      elsif i.voters.count >= 2
+        odds = 5
+      end
+
+      if rand * 100 < odds
+        vote = 1
+        if rand * 100 > 80
+          vote = -1
+        end
+
+        v = u.votes.create!(
+          item: i,
+          vote: vote
+        )
+        puts v.inspect
+      end
+    end
+  end
+end
+
 pull_dataset
+generate_votes
