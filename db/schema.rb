@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_29_200554) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_04_192147) do
   create_table "items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "parent_item_id"
+    t.bigint "parent_id"
     t.string "type", null: false
     t.string "title"
     t.text "body"
@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_200554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "url_id"
-    t.index ["parent_item_id"], name: "index_items_on_parent_item_id"
+    t.index ["parent_id"], name: "index_items_on_parent_id"
     t.index ["url_id"], name: "index_items_on_url_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
@@ -52,7 +52,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_200554) do
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
-  add_foreign_key "items", "items", column: "parent_item_id"
+  add_foreign_key "items", "items", column: "parent_id"
   add_foreign_key "items", "urls"
   add_foreign_key "items", "users"
   add_foreign_key "votes", "items"

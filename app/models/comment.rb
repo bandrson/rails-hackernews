@@ -1,3 +1,3 @@
 class Comment < Item
-  validates :parent_item, presence: true
+  validates :parent, presence: true
 end
