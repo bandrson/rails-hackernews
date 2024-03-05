@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_04_192147) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_05_191648) do
+  create_table "item_hierarchies", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "ancestor_id", null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations", null: false
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "item_anc_desc_idx", unique: true
+    t.index ["descendant_id"], name: "item_desc_idx"
+  end
+
   create_table "items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "parent_id"
@@ -22,6 +30,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_04_192147) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "url_id"
+    t.integer "score", default: 0, null: false
     t.index ["parent_id"], name: "index_items_on_parent_id"
     t.index ["url_id"], name: "index_items_on_url_id"
     t.index ["user_id"], name: "index_items_on_user_id"
