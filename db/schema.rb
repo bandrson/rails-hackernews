@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_05_191648) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_05_193619) do
   create_table "item_hierarchies", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "ancestor_id", null: false
     t.integer "descendant_id", null: false
@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_191648) do
     t.text "about", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "karma", default: 0, null: false
   end
 
   create_table "votes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|

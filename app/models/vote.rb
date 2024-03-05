@@ -11,5 +11,6 @@ class Vote < ApplicationRecord
   private
   def recalculate_item_score
     item.calculate_score
+    user.calculate_karma
   end
 end
