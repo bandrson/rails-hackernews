@@ -1,6 +1,24 @@
 <div id="<%= dom_id @user %>">
-  <p>Username: <%= @user.username %></p>
-  <p>Created: <%= @user.created_at %></p>
-  <p>Karma: <%= @user.karma %></p>
-  <p>About: <%= @user.about.html_safe %></p>
+  <h1 class="has-text-weight-bold mb-3"><%= @user.username %></h1>
+
+  <div class="columns is-multiline">
+    <div class="column is-1 py-0">
+      <small>Created:</small>
+    </div>
+    <div class="column is-11 py-0">
+      <small><%= l(@user.created_at, format: "%B %d, %Y") %></small>
+    </div>
+    <div class="column is-1 py-0">
+      <small>Karma:</small>
+    </div>
+    <div class="column is-11 py-0">
+      <small><%= @user.karma %></small>
+    </div>
+    <div class="column is-1 py-0">
+      <small>About:</small>
+    </div>
+    <div class="column is-11 py-0">
+      <small><%= @user.about.html_safe %></small>
+    </div>
+  </div>
 </div>
