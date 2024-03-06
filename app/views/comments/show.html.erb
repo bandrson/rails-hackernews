@@ -1,1 +1,18 @@
-<%= render partial: "comments/comment", locals: { comments: @comment_map } %>
+<% @comment_map.map do |root, children| %>
+  <div class="mb-5">
+    <small>
+      <%= link_to(root.user["username"], user_path(root.user)) %> <%= root.score %> points
+      <span title="<%= root["created_at"] %>"><%= time_ago_in_words(root["created_at"]) %> ago</span>
+      | <% if root.parent.is_a? Comment %>
+        <%= link_to("parent", comment_path(root.parent)) %>
+          <% else %>
+        <%= link_to("parent", story_path(root.parent)) %>
+      <% end %>
+      | <%= link_to("context", story_path(root.root, anchor: dom_id(root))) %>
+      | on: <%= link_to(root.root.title, story_path(root.root)) %>
+    </small>
+    <p class="content"><%= root.body.html_safe %></p>
+  </div>
+
+  <%= render partial: "comments/comment", locals: { comments: children } %>
+<% end %>
