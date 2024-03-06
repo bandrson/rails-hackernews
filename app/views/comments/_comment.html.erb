@@ -1,0 +1,23 @@
+<% comments.map do |comment, nested_comments| %>
+  <article class="media">
+    <figure class="media-left">
+      <p class="image is-16x16"></p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <small>
+            <%= link_to(comment.user["username"], user_path(comment.user)) %>
+          </small> <small><%= comment["score"] %> points</small> <small title="<%= comment["created_at"] %>"><%= time_ago_in_words(comment["created_at"]) %> ago</small>
+          <br>
+          <%= comment["body"].html_safe %>
+        </p>
+      </div>
+
+      <% if nested_comments != nil %>
+        <%= render partial: "comments/comment", locals: { comments: nested_comments } %>
+      <% end %>
+    </div>
+  </article>
+<% end %>
+

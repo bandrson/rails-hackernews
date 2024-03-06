@@ -1,0 +1,6 @@
+<div id="<%= dom_id @user %>">
+  <p>Username: <%= @user.username %></p>
+  <p>Created: <%= @user.created_at %></p>
+  <p>Karma: <%= @user.karma %></p>
+  <p>About: <%= @user.about.html_safe %></p>
+</div>

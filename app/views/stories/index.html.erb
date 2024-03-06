@@ -1,0 +1,9 @@
+<ol>
+  <% @stories.each do |story| %>
+    <li>
+      <%= link_to story_path(story) do %>
+        <%= story.title %>
+      <% end %>
+    </li>
+  <% end %>
+</ol>

@@ -1,0 +1,17 @@
+<% @story_map.map do |story, comments| %>
+  <h1>
+    <% if story.url %>
+      <%= link_to(story.title, story.url.url) %> <small>(<%= parse_host(story.url.url) %>)</small>
+    <% else %>
+      <%= story.title %>
+    <% end %>
+  </h1>
+  <small>
+    <%= story.score %> points by <%= link_to(story.user["username"], user_path(story.user)) %>
+     <span title="<%= story["created_at"] %>"><%= time_ago_in_words(story["created_at"]) %> ago</span>
+    | <%= story.descendants.count %> comments
+  </small>
+  <p class="content"><%= story.body %></p>
+
+  <%= render partial: "comments/comment", locals: { comments: comments } %>
+<% end %>

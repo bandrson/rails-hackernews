@@ -19,8 +19,8 @@ def process_item(item)
   end
 
   case item["type"]
-  when "story" then add_story(item, author)
-  when "comment" then add_comment(item, author)
+  when "stories" then add_story(item, author)
+  when "comments" then add_comment(item, author)
   else
     puts "Skipping unsupported Item type"
   end
