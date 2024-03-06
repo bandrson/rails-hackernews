@@ -1,9 +1,7 @@
 <ol class="pl-4">
   <% @stories.each do |story| %>
     <li>
-      <%= link_to story_path(story) do %>
-        <%= story.title %>
-      <% end %>
+      <%= render partial: "stories/story", locals: { story: story } %>
     </li>
   <% end %>
 </ol>

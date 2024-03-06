@@ -1,0 +1,14 @@
+<div class="mb-1">
+  <div>
+    <% if story.url %>
+      <span class="has-text-weight-bold"><%= link_to(story.title, story.url.url) %></span> <small>(<%= parse_host(story.url.url) %>)</small>
+    <% else %>
+      <span class="has-text-weight-bold"><%= link_to(story.title, story_path(story)) %></span>
+    <% end %>
+  </div>
+  <small>
+    <%= story.score %> points by <%= link_to(story.user["username"], user_path(story.user)) %>
+    <span title="<%= story["created_at"] %>"><%= time_ago_in_words(story["created_at"]) %> ago</span>
+    | <%= link_to("#{story.descendants.count} comments" , story_path(story)) %>
+  </small>
+</div>
