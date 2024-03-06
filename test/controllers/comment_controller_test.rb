@@ -2,12 +2,12 @@ require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get user_url
+    get comment_url
     assert_response :success
   end
 
-  test "should show user" do
-    get user_url(@user)
+  test "should show comment" do
+    get comment_url(@comment)
     assert_response :success
   end
 end
