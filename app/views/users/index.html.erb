@@ -1,0 +1,9 @@
+<div class="has-text-weight-bold mb-1">Users</div>
+
+<ol class="mb-5" style="list-style-position: inside;">
+  <% @users.each.with_index do |user, index| %>
+    <li value="<%= index + 1 + (@users.current_page - 1) * @users.limit_value %>"><%= link_to(user.username, user_path(user)) %> (karma: <%= user.karma %>)</li>
+  <% end %>
+</ol>
+
+<%= paginate @users %>

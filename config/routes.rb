@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "stories#index"
   get "stories/:id" => "stories#show", as: :story
   get "comments/:id" => "comments#show", as: :comment
+  get "users" => "users#index", as: :users
   get "users/:id" => "users#show", as: :user
 
 
