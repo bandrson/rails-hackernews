@@ -35,7 +35,9 @@ end
 def add_user(user)
   u = User.create!(
     username: user["username"],
-    about: user["about"] || ""
+    about: user["about"] || "",
+    created_at: item["created_at"],
+    updated_at: item["created_at"]
   )
 
   puts u.inspect
