@@ -1,0 +1,17 @@
+<div class="has-text-weight-bold mb-1">Stories</div>
+
+<div class="mb-2">
+  <%= form_tag(search_path, :method => "get") do %>
+    <%= label_tag(:query, "Search by title:") %>
+    <%= text_field_tag(:query, params[:query]) %>
+    <%= submit_tag("Search", :name => nil) %>
+  <% end %>
+</div>
+
+<ol class="pl-4">
+  <% @stories.each do |story| %>
+    <li>
+      <%= render partial: "stories/story", locals: { story: story } %>
+    </li>
+  <% end %>
+</ol>

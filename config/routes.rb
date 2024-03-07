@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "comments/:id" => "comments#show", as: :comment
   get "users" => "users#index", as: :users
   get "users/:id" => "users#show", as: :user
-
+  get "search" => "stories#search", as: :search
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
